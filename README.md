@@ -20,12 +20,14 @@ To identify operational risks and inefficiencies across product lines, suppliers
 | 4 | Cost by Transportation Mode | Sea freight averages 25% lower cost than air freight |
 | 5 | Lead Time by Supplier | Supplier 4 has the longest average lead time (17 days) with the highest variability |
 | 6 | Shipping Cost vs Revenue | Shipping cost remains below 0.2% of revenue across all product lines |
+| 7 | Inspection Results | Over one-third of products are Fail or Pending — Supplier 4 accounts for the highest Fail count |
+| 8 | Order Distribution by Location | Kolkata leads in order volume; Mumbai generates the highest revenue despite fewer orders |
 
 ---
 
 ## Supplier Risk Assessment
 
-Cross-referencing lead time and defect rate data surfaces **Supplier 4** as the highest-priority concern — it ranks worst on delivery speed and shows above-average defect rates, presenting compounded risk to both schedule and quality. **Supplier 5** independently flags as a quality risk with the highest defect rate in the dataset.
+Cross-referencing lead time, defect rate, and inspection data surfaces **Supplier 4** as the highest-priority concern — it ranks worst on delivery speed, shows above-average defect rates, and records the most inspection failures, presenting compounded risk across schedule, quality, and compliance. **Supplier 5** independently flags as a quality risk with the highest defect rate in the dataset.
 
 ---
 
