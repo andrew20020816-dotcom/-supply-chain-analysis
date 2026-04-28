@@ -1,6 +1,6 @@
 # Supply Chain Analysis — Python & Pandas
 
-A data analysis project exploring supply chain performance using a Kaggle dataset (100 SKUs, 3 product lines, 5 suppliers).
+A data analysis project exploring supply chain performance using a Kaggle dataset (100 SKUs, 3 product lines, 5 suppliers). Built to simulate the kind of data-driven supplier evaluation and risk assessment done in real procurement roles.
 
 ---
 
@@ -21,13 +21,36 @@ To identify operational risks and inefficiencies across product lines, suppliers
 | 5 | Lead Time by Supplier | Supplier 4 has the longest average lead time (17 days) with the highest variability |
 | 6 | Shipping Cost vs Revenue | Shipping cost remains below 0.2% of revenue across all product lines |
 | 7 | Inspection Results | Over one-third of products are Fail or Pending — Supplier 4 accounts for the highest Fail count |
-| 8 | Order Distribution by Location | Kolkata leads in order volume; Mumbai generates the highest revenue despite fewer orders |
+| 8 | Order Distribution by Location | Kolkata leads in order volume; Mumbai generates higher revenue despite fewer orders |
+| 9 | Supplier Risk Scorecard | Supplier 4 scores 0.848 (High Risk); Supplier 3 scores 0.307 (Low Risk) — composite evaluation across lead time, defect rate, and inspection results |
 
 ---
 
-## Supplier Risk Assessment
+## Supplier Risk Scorecard
 
-Cross-referencing lead time, defect rate, and inspection data surfaces **Supplier 4** as the highest-priority concern — it ranks worst on delivery speed, shows above-average defect rates, and records the most inspection failures, presenting compounded risk across schedule, quality, and compliance. **Supplier 5** independently flags as a quality risk with the highest defect rate in the dataset.
+A composite scoring model built to evaluate suppliers across three dimensions simultaneously — reflecting how procurement teams assess vendor risk in practice.
+
+| Supplier | Total Risk Score | Risk Level |
+|----------|-----------------|------------|
+| Supplier 4 | 0.848 | 🔴 High |
+| Supplier 2 | 0.655 | 🟠 Medium-High |
+| Supplier 5 | 0.547 | 🟡 Medium |
+| Supplier 1 | 0.433 | 🟢 Low-Medium |
+| Supplier 3 | 0.307 | 🟢 Low |
+
+**Scoring methodology:** Lead Time (40%) + Defect Rate (40%) + Inspection Fail Count (20%)  
+Weights are adjustable based on sourcing strategy — e.g. a semiconductor company might weight defect rate higher due to yield sensitivity.
+
+---
+
+## Key Takeaways
+
+- **Skincare** drives the highest revenue ($244K, 41% of total) but carries the greatest operational risk — 27% of SKUs are below safety stock and SKU68 is fully depleted
+- **Supplier 4** is the highest-risk vendor across all dimensions — longest lead time (17 days), above-average defect rate, and highest inspection fail count — composite risk score of 0.848, significantly above the group average. Priority candidate for supplier review or renegotiation
+- **Supplier 3** is the strongest overall performer (risk score: 0.307) — recommended as preferred supplier for critical SKUs
+- **Supplier 5** presents an independent quality risk with the highest defect rate (2.66%) — quality audit recommended regardless of lead time performance
+- **Sea freight** is the most cost-efficient mode at ~25% below air freight — a strategic shift toward sea routing could reduce logistics costs without compromising delivery windows
+- **Mumbai** generates the highest revenue despite fewer orders than Kolkata — indicating a higher average order value and stronger spending power per transaction
 
 ---
 
@@ -41,5 +64,5 @@ Cross-referencing lead time, defect rate, and inspection data surfaces **Supplie
 
 ## About
 
-Built as a portfolio project to demonstrate data-driven thinking applied to real supply chain problems.
+Built as a portfolio project to demonstrate data-driven thinking applied to real supply chain problems.  
 Relevant to roles in procurement, supply chain analytics, and operations management.
