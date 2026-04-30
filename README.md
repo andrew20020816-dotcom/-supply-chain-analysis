@@ -6,7 +6,7 @@ A data analysis project exploring supply chain performance using a Kaggle datase
 
 ## Objective
 
-To identify operational risks and inefficiencies across product lines, suppliers, and logistics — and translate findings into actionable procurement recommendations.
+To identify operational risks and inefficiencies across product lines, suppliers, and logistics — and translate findings into actionable procurement recommendations, including supplier risk ranking, inventory replenishment priorities, and logistics cost optimisation.
 
 ---
 
@@ -45,18 +45,23 @@ Weights are adjustable based on sourcing strategy — e.g. a semiconductor compa
 
 ## Key Takeaways
 
-- **Skincare** drives the highest revenue ($244K, 41% of total) but carries the greatest operational risk — 27% of SKUs are below safety stock and SKU68 is fully depleted
-- **Supplier 4** is the highest-risk vendor across all dimensions — longest lead time (17 days), above-average defect rate, and highest inspection fail count — composite risk score of 0.848, significantly above the group average. Priority candidate for supplier review or renegotiation
-- **Supplier 3** is the strongest overall performer (risk score: 0.307) — recommended as preferred supplier for critical SKUs
-- **Supplier 5** presents an independent quality risk with the highest defect rate (2.66%) — quality audit recommended regardless of lead time performance
-- **Sea freight** is the most cost-efficient mode at ~25% below air freight — a strategic shift toward sea routing could reduce logistics costs without compromising delivery windows
-- **Mumbai** generates the highest revenue despite fewer orders than Kolkata — indicating a higher average order value and stronger spending power per transaction
+- **Skincare** drives the highest revenue ($244K, 41% of total) but carries the greatest operational risk — 27% of SKUs are below safety stock and SKU68 is fully depleted. Recommended action: trigger immediate replenishment for SKU68 and raise safety stock thresholds for Skincare by 15-20% to prevent stockout-driven revenue loss.
 
+- **Supplier 4** is the highest-risk vendor across all dimensions — longest lead time (17 days), above-average defect rate, and highest inspection fail count — composite risk score of 0.848, significantly above the group average. Recommended action: initiate dual-sourcing strategy, reduce Supplier 4's order allocation by 20-30% pending a formal quality review, and set a 90-day performance improvement timeline.
+
+- **Supplier 3** is the strongest overall performer (risk score: 0.307) — recommended as preferred supplier for critical SKUs. Recommended action: consolidate high-priority orders with Supplier 3 and explore long-term contract negotiation to lock in favourable terms.
+
+- **Supplier 5** presents an independent quality risk with the highest defect rate (2.66%) — quality audit recommended regardless of lead time performance. Recommended action: request corrective action report (CAR) from Supplier 5 within 30 days and monitor defect trend over next two quarters.
+
+- **Sea freight** is the most cost-efficient mode at ~25% below air freight — a strategic shift toward sea routing could reduce logistics costs without compromising delivery windows. Recommended action: review current air freight usage and identify SKUs where lead time buffer allows a modal shift to sea freight.
+
+- **Mumbai** generates the highest revenue despite fewer orders than Kolkata — indicating a higher average order value and stronger spending power per transaction. Recommended action: prioritise Mumbai for premium product allocation and targeted marketing investment to maximise revenue per order.
 ---
 
 ## Tools
 
 - Python — pandas, matplotlib
+- Power BI — 4-page interactive dashboard with cross-filtering by supplier and KPI cards
 - Google Colab
 - Dataset: [Kaggle Supply Chain Analysis](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis)
 
